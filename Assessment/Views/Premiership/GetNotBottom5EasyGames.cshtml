@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Assessment.Models.LeagueTableStand>
+
+@{
+    ViewBag.Title = "GetNotBottom5EasyGames";
+}
+
+<h2>GetNotBottom5EasyGames</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TeamName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Postion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MatchPlayed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MatchWon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfDraws)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MatchLost)
+        </th>
+        
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TeamName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Postion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MatchPlayed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MatchWon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumberOfDraws)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MatchLost)
+        </td>
+        
+    </tr>
+}
+
+</table>
